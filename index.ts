@@ -5,6 +5,7 @@ const dotenv = require("dotenv");
 const helmet = require("helmet");
 const morgan = require("morgan");
 dotenv.config();
+const port =process.env.PORT || 6000;
 
 //importig routing routes;
 const auth = require("./routes/auth");
@@ -35,7 +36,7 @@ app.use("/seller", seller_api);
 app.use("/count",count);
 
 
-app.listen(8000, () => {
+app.listen(port, () => {
     console.log("Server is live!!");
 })
 
