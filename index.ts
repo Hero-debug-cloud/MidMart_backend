@@ -13,8 +13,10 @@ const product_api = require("./routes/product_api");
 const user_api = require("./routes/user_api");
 const seller_api = require("./routes/seller_api");
 const count = require("./routes/count");
+const cors = require('cors')
 
 //middleware;
+app.use(cors());
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
